@@ -1,0 +1,76 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+header {
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.add {
+    background-color: inherit;
+    margin: 1rem 0 0 1rem;
+}
+
+.add:hover {
+    background-color: whitesmoke;
+}
+
+.library {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.card h3 {
+    font-size: 1rem;
+}
+
+.card p {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+}
+
+button {
+    margin-top: 1rem;
+    border: 0;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-weight: 600;
+    width: 7rem;
+}
+
+.unread,.read {
+    margin-right: 0.5rem;
+}
+
+.unread {
+    background-color: #fdaaaa;
+}
+
+.unread:hover {
+    background-color: #E7625F;
+}
+
+.read {
+    background-color: #b2fba5;
+}
+
+.read:hover {
+    background-color: #77dd77;
+}
+
+.remove:hover {
+    background-color: #aeaeae;
+}
+
+button:hover {
+    cursor: pointer;
+}
