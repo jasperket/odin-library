@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Library</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,6 +23,31 @@
             <button class="remove">Remove</button>
         </div> -->
     </div>
+    <dialog>
+        <form action="">
+            <legend>Add Book</legend>
+            <button class="close-dialog">
+                <span class="material-symbols-outlined">
+                close
+                </span>
+            </button>
+            <ul>
+                <li>
+                    <label for="add-title">Title</label><input type="text" name="add-title" id="add-title" required>
+                </li>
+                <li>
+                    <label for="add-author">Author</label><input type="text" name="add-author" id="add-author" required>
+                </li>
+                <li>
+                    <label for="add-pages">Pages</label><input type="number" name="add-pages" id="add-pages" value= "1" required>
+                </li>
+                <li>
+                    <label for="add-read">Have you finished the book?</label><input type="checkbox" name="add-read" id="add-read">
+                </li>
+            </ul>
+            <button type="submit" class="submit-book">Add Book</button>
+        </form>
+    </dialog>
     <script src="script.js"></script>
 </body>
 </html>
