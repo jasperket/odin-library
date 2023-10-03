@@ -42,6 +42,7 @@ function displayLibrary() {
 
         library.appendChild(card);
     }
+    removeBooks();
 }
 
 const btnClose = document.querySelector('.close-dialog');
@@ -66,3 +67,14 @@ btnSubmitBook.addEventListener('click',(e) => {
     const form = document.querySelector('#add-book');
     form.reset();
 })
+
+function removeBooks() {
+    const btnsRemoveBook = document.querySelectorAll('.remove');
+    btnsRemoveBook.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            const indexToRemove = btn.dataset.index;
+            myLibrary.splice(indexToRemove,1);
+            displayLibrary();
+        })
+    })
+}
