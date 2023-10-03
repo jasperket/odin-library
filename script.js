@@ -37,12 +37,13 @@ function displayLibrary() {
         card.innerHTML = "<h2>"+myLibrary[i].title+"</h2>"+
         "<h3>"+myLibrary[i].author+"</h3>"+
         "<p>Pages: "+myLibrary[i].pages+"</p>"+
-        "<button class='"+read.toLowerCase()+"'>"+read+"</button>"+
+        "<button class='"+read.toLowerCase()+"' data-index='"+i+"'>"+read+"</button>"+
         "<button class='remove' data-index='"+i+"'>Remove</button>";
 
         library.appendChild(card);
     }
     removeBooks();
+    toggleReadBooks();
 }
 
 const btnClose = document.querySelector('.close-dialog');
@@ -74,6 +75,22 @@ function removeBooks() {
         btn.addEventListener('click', (e) => {
             const indexToRemove = btn.dataset.index;
             myLibrary.splice(indexToRemove,1);
+            displayLibrary();
+        })
+    })
+}
+
+
+Book.prototype.toggleRead = function () {
+    this.read = !(this.read);
+}
+
+function toggleReadBooks() {
+    const btnsReadStatus = document.querySelectorAll('.read, .unread');
+    btnsReadStatus.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            const indexToToggle = btn.dataset.index;
+            myLibrary[indexToToggle].toggleRead();
             displayLibrary();
         })
     })
